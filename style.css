@@ -1,5 +1,6 @@
 :root {
     --search-icon-height: 17px;
+	--notifs-icon-height: 16px;
 }
 
 body {
@@ -80,7 +81,12 @@ body {
 	-moz-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
     clip-path: inset(0px  0px -10px 0px);
-    padding: 14px 28px;
+    padding: 8px 28px;
+}
+
+.header h2 {
+	font-size: 0.78rem;
+	white-space: nowrap;
 }
 
 .header-top {
@@ -107,9 +113,43 @@ body {
     height: var(--search-icon-height);
 }
 
+.user-panel {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	margin-right: 11px;
+}
+
+.user-panel>a.notifs-btn {
+	height: var(--notifs-icon-height);
+}
+
+.user-panel a.notifs-btn img.notifs-icon {
+	height: var(--notifs-icon-height);
+}
+
+.user-icon {
+	display: inline-block;
+	border-radius: 50%;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-image: url("./assets/user-icon.png");
+}
+
+.user-panel-icon-size {
+	width: 34px;
+	height: 34px;
+}
+
+.user-greeting-icon-size {
+
+}
+
 #site-search,
 #site-search:focus {
-    background-color: #dedede;
+    background-color: #E2E8F0;
     border-radius: 25px;
     border: none;
     flex: auto;
